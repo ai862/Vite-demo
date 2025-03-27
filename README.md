@@ -1,17 +1,31 @@
-1. 克隆本仓库：
+## 本地环境搭建
+
+1. 克隆项目代码：
 ```bash
 git clone https://github.com/ai862/Vite-demo.git
-```
-2. 进入项目目录：
-```bash
 cd Vite-demo
 ```
-3. 安装依赖：
+
+2. 安装项目依赖：
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
-4. 启动开发服务器：
+
+3. 启动开发服务器：
 ```bash
 npm run dev
 ```
-5. 打开浏览器访问`localhost:4173`，你将看到一个简单的Vue应用。
+
+服务器默认启动在 http://localhost:4173
+
+## Docker环境搭建
+
+1. 构建Docker镜像：
+```bash
+docker build -t vite-demo .
+```
+
+2. 运行容器：
+```bash
+docker run -d -p 4173:4173 vite-demo
+```
